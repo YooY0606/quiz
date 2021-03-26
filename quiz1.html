@@ -1,1 +1,26 @@
-<html> <head>   <title>My Document</title>   <script type="text/javascript">   function change() {     var header = document.getElementById("hid123");     header.innerHTML = "CSIE@CGU";     var para = document.getElementById("pid123");     para.innerHTML = "怎麼那麼棒！！.";   }   </script> </head> <body>   <input type="button" value="Change this document." onclick="change()">   <h1 id="hid123">CGU</h1>   <p id="pid123">好棒棒</p> </body> </head>
+<html> 
+    <head>  
+         <title>My Document</title>   
+         <script type="text/javascript">   
+         function change() 
+         {     
+            var btn = document.createElement("button");
+            btn.innerHTML = "Change this document.";
+            document.body.appendChild(btn);
+            btn.addEventListener("click", myfunction);
+        }
+        function myfunction()
+        {
+            var header = document.getElementById("hid12");     
+             header.innerHTML = "CSIE@CGU"; 
+             var para = document.getElementById("pid12");    
+            para.innerHTML = "<p>好棒棒</p>  怎麼那麼棒！！."; 
+        }
+ </script> 
+ </head> 
+ <body>   
+     <input type="button" value="Try it" onclick="change()">   
+    <h1 id="hid12">CGU</h1>   
+    <p id="pid12">好棒棒</p>  
+</body>
+</head>
